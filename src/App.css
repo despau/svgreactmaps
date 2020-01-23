@@ -10,5 +10,10 @@ body {
 
 .app-body {
   margin: 50px;
-  background: yellow;
+  /* background: yellow; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
 }
+

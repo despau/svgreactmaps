@@ -2,6 +2,7 @@ import styled from 'styled-components'
 
 export const USMapContainer = styled.div `
     padding: 0;
+    margin: 0 auto;
 `;
 
 export const USSVGContainer = styled.svg `
@@ -25,6 +26,9 @@ export const USSVGContainer = styled.svg `
             :active {
                 fill: green;
             }
-
+            
+            :selected, visited{
+                fill: red;
+            }
     }
 `;
