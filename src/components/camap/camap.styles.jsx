@@ -18,9 +18,8 @@ export const SVGContainer = styled.svg `
     height: ${props => props.height}rem;
     width: ${props => props.width}rem;
 
-     
     path {
-        fill: beige;
+        fill: #737373;
 
         :hover {
             fill: blue;
@@ -31,11 +30,18 @@ export const SVGContainer = styled.svg `
             fill: green;
         }
 
-        .red {
-            fill: red;
+        :focus {
+            fill: black;
         }
 }
+
     .red {
         fill: red;
     }
+    
+    .yellow {
+        fill: yellow;
+    }
+
+
 `;

@@ -1,9 +1,8 @@
-import styled, {css} from 'styled-components'
+import styled from 'styled-components'
 
 
 export const USMapContainer = styled.div `
-    padding: 0;
-    margin: 0 auto;
+   
 `;
 
 
@@ -33,6 +32,10 @@ export const USSVGContainer = styled.svg `
 
     .red {
         fill: red;
+    }
+
+    .yellow {
+        fill: yellow;
     }
 
 `;
