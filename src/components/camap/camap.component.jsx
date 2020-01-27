@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import { MapContainer, SVGContainer } from './camap.styles' //"-141.007366 83.116658 -52.648425 41.730628" 
 //import './camap.css'
 // 0 0 694.4 685
@@ -6,6 +6,19 @@ const CAMap = ({height, width}) => {
     
   const [regions, setRegions] = useState([]);
 
+  useEffect(() => {
+    regions.map(region => {
+        if(region.getAttribute('class') === 'red'){
+            return region.classList.remove('red')
+        }else {   
+          console.log(region.getAttribute('class'))
+              return   region.classList.add('red')
+        }
+        
+       
+    
+    })
+  }, [regions]);
 
   const handleClick = e => {      
       if(regions.includes(e.currentTarget.id)){

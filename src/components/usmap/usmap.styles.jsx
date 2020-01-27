@@ -9,13 +9,13 @@ export const USMapContainer = styled.div `
 
 
 export const USSVGContainer = styled.svg `
-
+    
     height: ${props => props.height}rem;
     width: ${props => props.width}rem;
 
     
     path {
-        fill: #7e7e7e;
+        fill: #737373;
 
         :hover {
             fill: blue;
@@ -29,21 +29,19 @@ export const USSVGContainer = styled.svg `
         :focus {
             fill: black;
         }
-        
-        :selected, visited{
-            fill: gray;
-        }
-
 }
 
-    
+    .red {
+        fill: red;
+    }
+
 `;
 
 
 export const svgPathContainer = styled.a `
     color: green;
-    background-color: pink
-    &:visited {
-        background-color: yello;
+    background-color: pink;
+    :visited {
+        background-color: yellow;
     }
 `;

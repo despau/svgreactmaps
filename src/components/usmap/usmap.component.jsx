@@ -7,15 +7,28 @@ const USAMap = ({height, width}) => {
 
     const [regions, setRegions] = useState([]);
 
+    useEffect(() => {
+
+
+        return console.log(regions.toString())
+
+      }, [regions]);
+
+    const addRegion = (regions, regionToAdd) => {
+        regions.find( region =>region.id ===regionToAdd.id)
+    }
 
     const handleClick = e => {
-        
         if(regions.includes(e.currentTarget)){
+            //remove css class if item already exists
+            e.currentTarget.setAttribute('class', '')
             const boss = regions.filter(region=>{
                 return region.id !== e.currentTarget.id
             })
             return setRegions([...boss])
         }
+        //add css class
+        e.currentTarget.setAttribute('class', 'red')
         return setRegions([...regions, e.currentTarget])
     }
 
@@ -24,7 +37,7 @@ const USAMap = ({height, width}) => {
         <USMapContainer>
             <USSVGContainer id='svg' xmlns="http://www.w3.org/2000/svg" height={height} width={width} version="1.1" viewBox="0 0 930 519"  handleChange>
                 <path
-                    className={''}
+                    className={'ma'}
                     onClick={handleClick}
                     id="MA"
                     data-name="Massachusetts"
@@ -257,7 +270,8 @@ const USAMap = ({height, width}) => {
                 />
                 <path
                     className={''}
-                    fill={''}
+                    style={{ fill: 'red'}}
+                    // color='blue'
                     onClick={handleClick}
                     id="FL"
                     data-name="Florida"

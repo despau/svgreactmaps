@@ -30,9 +30,12 @@ export const SVGContainer = styled.svg `
         :active {
             fill: green;
         }
-        
-        :selected, visited{
+
+        .red {
             fill: red;
         }
 }
+    .red {
+        fill: red;
+    }
 `;
