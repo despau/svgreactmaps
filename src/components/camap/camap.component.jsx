@@ -1,23 +1,23 @@
-import React, {useState} from 'react'
+import React from 'react'
 import { MapContainer, SVGContainer } from './camap.styles' //"-141.007366 83.116658 -52.648425 41.730628" 
 
-const CAMap = ({height, width}) => {  
+const CAMap = ({height, width, handleClick}) => {  
     
-  const [regions, setRegions] = useState([]);
+//   const [regions, setRegions] = useState([]);
 
-  const handleClick = e => {
-    if(regions.includes(e.currentTarget)){
-        //remove css class if item already exists
-        e.currentTarget.setAttribute('class', 'yellow')
-        const boss = regions.filter(region=>{
-            return region.id !== e.currentTarget.id
-        })
-        return setRegions([...boss])
-    }
-    //add css class
-    e.currentTarget.setAttribute('class', 'red')
-    return setRegions([...regions, e.currentTarget])
-}
+//   const handleClick = e => {
+//     if(regions.includes(e.currentTarget)){
+//         //remove css class if item already exists
+//         e.currentTarget.setAttribute('class', 'yellow')
+//         const boss = regions.filter(region=>{
+//             return region.id !== e.currentTarget.id
+//         })
+//         return setRegions([...boss])
+//     }
+//     //add css class
+//     e.currentTarget.setAttribute('class', 'red')
+//     return setRegions([...regions, e.currentTarget])
+// }
 
 
     return (
@@ -92,8 +92,8 @@ const CAMap = ({height, width}) => {
             </SVGContainer>
         </MapContainer>
 
-        <label htmlFor="states-box">Selected Countries: </label>
-        <input type="text" value={regions.map(region=>region.id).join()}/>    
+        {/* <label htmlFor="states-box">Selected Countries: </label>
+        <input type="text" value={regions.map(region=>region.id).join()}/>     */}
         </>
     )
 };

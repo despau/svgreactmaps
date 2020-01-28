@@ -14,7 +14,7 @@ export const USSVGContainer = styled.svg `
 
     
     path {
-        fill: #737373;
+        fill: gray;
 
         :hover {
             fill: blue;
@@ -31,11 +31,11 @@ export const USSVGContainer = styled.svg `
 }
 
     .red {
-        fill: red;
+        fill: lightcoral;
     }
 
     .yellow {
-        fill: yellow;
+        fill: rgba(200,200,200, .2);
     }
 
 `;

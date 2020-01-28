@@ -1,26 +1,26 @@
-import React, {useState } from 'react'
+import React from 'react'
 import { USMapContainer, USSVGContainer } from './usmap.styles'
 
 
 
-const USAMap = ({height, width}) => {
+const USAMap = ({height, width, handleClick}) => {
 
-    const [regions, setRegions] = useState([]);
+    // const [regions, setRegions] = useState([]);
 
 
-    const handleClick = e => {
-        if(regions.includes(e.currentTarget)){
-            //remove css class if item already exists
-            e.currentTarget.setAttribute('class', 'yellow')
-            const boss = regions.filter(region=>{
-                return region.id !== e.currentTarget.id
-            })
-            return setRegions([...boss])
-        }
-        //add css class
-        e.currentTarget.setAttribute('class', 'red')
-        return setRegions([...regions, e.currentTarget])
-    }
+    // const handleClick = e => {
+    //     if(regions.includes(e.currentTarget)){
+    //         //remove css class if item already exists
+    //         e.currentTarget.setAttribute('class', 'yellow')
+    //         const boss = regions.filter(region=>{
+    //             return region.id !== e.currentTarget.id
+    //         })
+    //         return setRegions([...boss])
+    //     }
+    //     //add css class
+    //     e.currentTarget.setAttribute('class', 'red')
+    //     return setRegions([...regions, e.currentTarget])
+    // }
 
     return (
         <>
@@ -335,9 +335,9 @@ const USAMap = ({height, width}) => {
 
             </USSVGContainer>
         </USMapContainer>
-            
+{/*             
             <label htmlFor="states-box">Selected Countries: </label>
-            <input type="text" value={regions.map(region=>region.id).join()}/>     
+            <input id="states-box" type="text" value={regions.map(region=>region.id).join()}/>      */}
 
        </>
     )

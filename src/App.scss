@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  box-sizing: border-box;
+  background-color: #e7e7e7;
+}
+
+.app-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  // height: 5rem;
+  width: 10rem;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 1rem;
+   input {
+     width: 10rem;
+     margin-top: .5rem;
+   }
+}
+
+.maps-container{
+  display: flex;
+  justify-content: row;
+  align-items: center;
+}
+
