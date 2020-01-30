@@ -35,7 +35,8 @@ export const USSVGContainer = styled.svg `
     }
 
     .yellow {
-        fill: rgba(200,200,200, .2);
+        /* fill: rgba(200,200,200, .2); */
+        fill: black;
     }
 
 `;

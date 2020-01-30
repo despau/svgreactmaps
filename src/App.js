@@ -6,11 +6,12 @@ import CAMap from './components/camap/camap.component'
 
 const App= () => {
 
-  // const [regions, setRegions] = useState([]);
+  const [regions, setRegions] = useState([]);
 
-  // const handleRegionsClick = e =>  {
+  const handleRegionsClick = e =>  {
+    
     //  if(regions.includes(e.currentTarget.id)){
-          // e.currentTarget.setAttribute('class', 'yellow')
+    //       e.currentTarget.setAttribute('class', 'yellow')
     //       const boss = regions.filter(region => {
     //          return region.id !== e.currentTarget.id
     //      })
@@ -26,29 +27,41 @@ const App= () => {
     //     const region = { id, name, d};
     //     return setRegions([...regions, region])
     // }
-  
-  //}
 
-  //  useEffect(() => {
-  //    regions.map(region => {
-  //      return console.log(region)
-  //    })
-  //  }, [regions])
-
-  const [regions, setRegions] = useState([]);
-
-   const handleRegionsClick = e => {
-    if(regions.includes(e.currentTarget)){
-        e.currentTarget.setAttribute('class', 'yellow')
-        const boss = regions.filter(region=>{
-            return region.id !== e.currentTarget.id
-        })
-        return setRegions([...boss])
+    const daid = e.currentTarget.id;
+    if(regions.includes(daid)){
+      const cool =regions.filter(region=>{
+        return region.id !== daid
+      });
+      e.currentTarget.setAttribute('class', 'yellow');
+      setRegions(...[cool]);
     }
-    e.currentTarget.setAttribute('class', 'red')
-    return setRegions([...regions, e.currentTarget])
+      e.currentTarget.setAttribute('class', 'red');
+      console.log(e.currentTarget.class)
+  }
 
-}
+   useEffect(() => {
+     regions.map(region => {
+       region.setAttribute('class', 'yellow')
+       return console.log(region)
+       
+     })
+   }, [regions])
+
+//   const [regions, setRegions] = useState([]);
+
+//    const handleRegionsClick = e => {
+//     if(regions.includes(e.currentTarget)){
+//         e.currentTarget.setAttribute('class', 'yellow')
+//         const boss = regions.filter(region=>{
+//             return region.id !== e.currentTarget.id
+//         })
+//         return setRegions([...boss])
+//     }
+//     e.currentTarget.setAttribute('class', 'red')
+//     return setRegions([...regions, e.currentTarget])
+
+// }
 
   return (
     <div className='app-body'>
